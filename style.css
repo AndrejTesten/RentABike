@@ -79,6 +79,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 .about-section {
     position: relative;
     overflow: hidden;
@@ -115,7 +116,9 @@
   .about-content p {
     font-size: 40px;
   }
-
+.review-content>p{
+  font-size: 30px;
+}
   @media (max-width: 768px) {
     .about-content {
       padding: 30px;

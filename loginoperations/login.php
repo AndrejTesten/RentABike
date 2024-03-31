@@ -1,17 +1,6 @@
+<?php require_once '../includes/session.php'; ?>
+<?php require_once '../includes/database.php'; ?>
 <?php
-session_start();
-
-$servername = 'localhost';
-$username = 'root';
-$password = '';
-$dbname = 'bikes';
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -38,15 +27,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("Location: ../crm.php");
                 exit();
             } else {
-                echo "Neznan uporabnik";
+                echo "Unknown user type.";
             }
         } else {
             $loginError = "Invalid email or password.";
-            echo "Napačno geslo ali email";
+            echo "Invalid email or password.";
         }
     } else {
         $loginError = "Invalid email or password.";
-        echo "Napačno geslo ali email";
+        echo "Invalid email or password.";
     }
 }
 

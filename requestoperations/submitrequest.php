@@ -1,15 +1,5 @@
-<?php
-$servername = 'localhost';
-$username = 'root';
-$password = '';
-$dbname = 'bikes';
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
+<?php 
+require '../includes/database.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $model = $_POST['model'];
     $name = $_POST['name'];

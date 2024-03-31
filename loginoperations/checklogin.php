@@ -1,24 +1,15 @@
 <?php
-session_start();
+require 'session.php'; // Include session.php where your session-related functions are defined
+require 'database.php'; // Include database.php to establish database connection
 
-if (!isset($_SESSION['email'])) {
-    header("Location: login.php");
-    exit();
-}
+// Check if user is logged in, if not, redirect to login page
+redirectToLogin();
 
-$servername = 'localhost';
-$username = 'root';
-$password = '';
-$dbname = 'bikes';
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// Now you can continue with the rest of your code
 
 $userEmail = $_SESSION['email'];
 $sql = "SELECT * FROM reservations WHERE email = '$userEmail'";
 $result = $conn->query($sql);
 
+// Your other code here
 ?>

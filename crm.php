@@ -1,18 +1,6 @@
-<?php
-$servername = 'localhost';
-$username = 'root';
-$password = '';
-$dbname = 'bikes';
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-$sql = "SELECT * FROM reservations";
-$result = $conn->query($sql);
+<?php require_once 'includes/database.php'; 
 ?>
+<?php require_once 'includes/modals.php';?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -71,6 +59,16 @@ $result = $conn->query($sql);
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Zahtevi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="messages.php">Sporočila</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 <div class="container">
@@ -90,6 +88,8 @@ $result = $conn->query($sql);
             </thead>
             <tbody>
                 <?php
+                $sql = "SELECT * FROM reservations";
+                $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         $reservationId = $row['id'];
@@ -115,8 +115,8 @@ $result = $conn->query($sql);
                             <td><?php echo $dateTo; ?></td>
                             <td class="<?php echo $statusClass; ?>"><?php echo $status; ?></td>
                             <td>
-                                <a href="requestoperations\approve_request?id=<?php echo $reservationId; ?>" class="btn btn-success">Potrdi</a>
-                                <a href="requestoperations\reject_request?id=<?php echo $reservationId; ?>" class="btn btn-danger">Zavrni</a>
+                                <a href="requestoperations\approverequest.php?id=<?php echo $reservationId; ?>" class="btn btn-success">Potrdi</a>
+                                <a href="requestoperations\rejectrequest.php?id=<?php echo $reservationId; ?>" class="btn btn-danger">Zavrni</a>
                             </td>
                         </tr>
                 <?php

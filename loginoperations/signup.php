@@ -1,16 +1,7 @@
 <?php
-session_start();
-
-$servername = 'localhost';
-$username = 'root';
-$password = '';
-$dbname = 'bikes';
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// Include session handling and database connection files
+require_once 'session.php';
+require_once 'database.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
@@ -47,6 +38,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
-
-$conn->close();
 ?>

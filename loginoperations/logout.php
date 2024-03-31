@@ -1,7 +1,6 @@
-<?php
-session_start();
-session_unset();
-session_destroy();
-header("Location: ../index");
-exit();
+<?php require_once '../includes/session.php'; 
+
+
+// Call the logout function from session.php
+logout();
 ?>
