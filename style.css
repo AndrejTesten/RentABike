@@ -1,0 +1,186 @@
+.navbar-brand {
+    margin-right: auto;
+  }
+
+  .contact-btn {
+    margin-left: 10px;
+  }
+
+  @media (max-width: 576px) {
+    .navbar-toggler {
+      margin-right: 10px;
+    }
+  }
+ 
+ 
+   .carousel-control-prev,
+    .carousel-control-next {
+      height: 40px;
+      width: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0.8;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      height: 100%;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+      opacity: 1;
+    }
+    .card {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      
+      .card-image {
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+      
+      .card-content {
+        padding: 20px;
+      }
+      
+      .card-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      
+      .card-list {
+        text-align: center;
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      
+      .card-list-item {
+        margin-bottom: 5px;
+        
+      }
+      .card-content > button {
+        text-align: center;
+      }
+      
+.cards {
+    display: flex;
+    justify-content: space-between;
+}
+.about-section {
+    position: relative;
+    overflow: hidden;
+    height: 100vh !important;
+  }
+
+  .about-bg {
+    background-image: url('slike/pozadina.jpg');
+    filter: brightness(20%);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 0;
+  }
+
+  .about-content {
+
+    margin-top: 20vh;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+  }
+  .about-content h2 {
+    font-size: 70px;
+  }
+  .about-content p {
+    font-size: 40px;
+  }
+
+  @media (max-width: 768px) {
+    .about-content {
+      padding: 30px;
+    }
+    .about-content h2 {
+        font-size: 40px;
+      }
+      .about-content p {
+        font-size: 20px;
+      }
+  }
+  
+  
+    .user-reviews-section {
+      padding: 50px 0;
+      background-color: #f9f9f9;
+    }
+
+    .review-card {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .review-image img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .review-content h4 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .review-content p {
+      font-size: 14px;
+      color: #666;
+    }
+   
+      
+      
+      @media (max-width: 768px) {
+        .about-content {
+          padding: 30px;
+        }
+        
+      }
+      .izberi {
+        margin-top:30px !important;
+    }
+      
+    .modal {
+      z-index: 1050;
+    }
+    .login-button {
+      margin-left:2em;
+      margin-right: 2em;
+    }
+    .login-button a{
+      color: white;
+    }
+    
