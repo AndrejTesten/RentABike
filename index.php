@@ -21,8 +21,13 @@
         echo ' <a href="loginoperations\logout" class="btn btn-primary">Logout</a>';
       } else {
         echo '<div class="login-button">
-        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#loginModal">
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#loginModal">
           Login
+        </button>
+      </div>
+      <div class="login-button">
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#signupModal">
+          SignUp
         </button>
       </div>';
       }
@@ -79,7 +84,36 @@
       </div>
     </div>
   </div>
-
+  
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModalLabel">Registracija</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="loginoperations/signup.php" method="POST">
+          <div class="form-group">
+            <label for="signup_email">Email:</label>
+            <input type="email" class="form-control" name="email" id="signup_email" required>
+          </div>
+          <div class="form-group">
+            <label for="signup_password">Geslo:</label>
+            <input type="password" class="form-control" name="password" id="signup_password" required>
+          </div>
+          <div class="form-group">
+            <label for="confirm_password">Potrdi geslo:</label>
+            <input type="password" class="form-control" name="confirm_password" id="confirm_password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Registriraj se</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
   <section id="about" class="about-section">
     <div class="about-bg"></div>
