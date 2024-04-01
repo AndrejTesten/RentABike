@@ -6,16 +6,16 @@
       <?php
       if (isset($_SESSION['email'])) {
         $loggedInEmail = $_SESSION['email'];
-        echo ' <a href="loginoperations/logout.php" class="btn btn-primary">Logout</a>';
+        echo ' <a href="loginoperations/logout.php" class="btn btn-primary">Odjava</a>';
       } else {
         echo '<div class="login-button">
         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#loginModal">
-          Login
+          Prijava
         </button>
       </div>
       <div class="login-button">
         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#signupModal">
-          SignUp
+          Registracija
         </button>
       </div>';
       }
@@ -27,7 +27,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#about">O nama</a>
+            <a class="nav-link" href="index.php">O nama</a>
           </li>
           <?php
           if (isset($_SESSION['email'])) {
@@ -37,10 +37,10 @@
             </li>';
           } ?>
           <li class="nav-item">
-            <a class="nav-link" href="#bike-rent">Ponudba</a>
+            <a class="nav-link" href="index.php#bike-rent">Ponudba</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#user_reviews">Rekli so o nama</a>
+            <a class="nav-link" href="index.php#user_reviews">Rekli so o nama</a>
           </li>
         </ul>
       </div>
